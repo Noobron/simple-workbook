@@ -1,0 +1,21 @@
+# dependencies
+/packages/**/node_modules
+/packages/local-client/.pnp
+/packages/local-client/.pnp.js
+
+# testing
+/packages/local-client/coverage
+
+# production
+/packages/local-client/build
+
+# misc
+/packages/local-client/.DS_Store
+/packages/local-client/.env.local
+/packages/local-client/.env.development.local
+/packages/local-client/.env.test.local
+/packages/local-client/.env.production.local
+
+/packages/local-client/npm-debug.log*
+/packages/local-client/yarn-debug.log*
+/packages/local-client/yarn-error.log*

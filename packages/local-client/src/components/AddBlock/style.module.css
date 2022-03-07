@@ -1,0 +1,36 @@
+.add-block {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease-in 0.1s;
+  margin: 15px 0;
+}
+
+.add-block:hover {
+  opacity: 1;
+}
+
+.add-block.force-visible {
+  opacity: 1;
+}
+
+.add-block .divider {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  width: 90%;
+  right: 5%;
+  left: 5%;
+  border-bottom: 1px solid white;
+  z-index: -1;
+}
+
+.add-block .add-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.add-block .add-buttons button {
+  margin: 0 60px;
+  display: flex;
+  gap: 8px;
+}

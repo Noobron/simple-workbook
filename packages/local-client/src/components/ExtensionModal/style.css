@@ -1,0 +1,13 @@
+.modal-dialog {
+  width: 40%;
+}
+
+.modal-body {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.modal-body .js-content {
+  display: flex;
+  gap: 15%;
+}

@@ -1,0 +1,14 @@
+.action-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.25;
+  transition: opacity 0.3s;
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.action-bar:hover {
+  opacity: 1;
+}

@@ -1,0 +1,22 @@
+.editor-wrapper {
+  position: relative;
+  height: 100%;
+  width: calc(100% - 81px);
+}
+
+.editor-options {
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+  flex-flow: row-reverse;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.editor-wrapper:hover .editor-options {
+  opacity: 1;
+}
