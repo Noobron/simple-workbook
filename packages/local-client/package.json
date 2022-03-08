@@ -42,11 +42,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "workbook": "concurrently --kill-others \"npm run start\" \"node server.mjs \""
+    "start": "concurrently --kill-others \"react-scripts start\" \"node server.mjs \""
   },
   "eslintConfig": {
     "extends": [
