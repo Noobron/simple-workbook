@@ -1,6 +1,6 @@
 import { EditorLanguages } from "..";
 import { ActionType } from "../action-types";
-import { BlockContentType, BlockType } from "../block";
+import { Block, BlockContentType, BlockType } from "../block";
 
 export type BlockDirectionType = "up" | "down";
 
@@ -50,10 +50,33 @@ export interface BundleCompleteAction {
   };
 }
 
+export interface FetchBlockAction {
+  type: ActionType.FETCH_BLOCKS;
+}
+
+export interface FetchBlockCompleteAction {
+  type: ActionType.FETCH_BLOCK_COMPLETE;
+  payload: Block[];
+}
+
+export interface FetchBlockErrorAction {
+  type: ActionType.FETCH_BLOCKS_ERROR;
+  payload: string;
+}
+
+export interface SaveBlockErrorAction {
+  type: ActionType.SAVE_BLOCKS_ERROR;
+  payload: string;
+}
+
 export type Action =
   | MoveBlockAction
   | DeleteBlockAction
   | InsertBlockAfterAction
   | UpdateBlockAction
   | BundleStartAction
-  | BundleCompleteAction;
+  | BundleCompleteAction
+  | FetchBlockAction
+  | FetchBlockCompleteAction
+  | FetchBlockErrorAction
+  | SaveBlockErrorAction;

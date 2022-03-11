@@ -11,9 +11,11 @@ export const serve = (
   useProxy: boolean
 ) => {
   console.log("Working directory:", `\x1b[33m${dir}\x1b[0m`);
-  console.log("Saving changes in file:", `\x1b[33m${filename}\x1b[0m`);
+  console.log("Changes will be saved in file:", `\x1b[33m${filename}\x1b[0m`);
 
   const app = express();
+
+  app.use(createBlockRouter(filename, dir));
 
   if (useProxy) {
     const envPath = require.resolve("local-client/.env");
@@ -31,8 +33,6 @@ export const serve = (
 
     app.use(express.static(path.dirname(packagePath)));
   }
-
-  app.use(createBlockRouter(filename, dir));
 
   return new Promise<void>((resolve, reject) => {
     app.listen(port, resolve).on("error", reject);

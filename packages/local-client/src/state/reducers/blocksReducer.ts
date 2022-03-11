@@ -7,6 +7,7 @@ import { Block, EditorLanguages } from "../block";
 export interface BlocksState {
   loading: boolean;
   order: string[];
+  error: string | null;
   data: {
     [id: string]: Block;
   };
@@ -14,6 +15,7 @@ export interface BlocksState {
 
 const initialState: BlocksState = {
   loading: false,
+  error: null,
   order: [],
   data: {},
 };
@@ -88,6 +90,38 @@ const blocksReducer = produce(
         } else {
           state.order.splice(blockIndex + 1, 0, block.id);
         }
+        return state;
+
+      // start fetching blocks from file
+      case ActionType.FETCH_BLOCKS:
+        state.loading = true;
+        state.error = null;
+
+        return state;
+
+      // error while fetching blocks from file
+      case ActionType.FETCH_BLOCKS_ERROR:
+        state.loading = false;
+        state.error = action.payload;
+
+        return state;
+
+      // fetching blocks from file complete
+      case ActionType.FETCH_BLOCK_COMPLETE:
+        state.order = action.payload.map((block) => block.id);
+
+        state.data = action.payload.reduce((acc, block) => {
+          acc[block.id] = block;
+          return acc;
+        }, {} as BlocksState["data"]);
+
+        return state;
+
+      // error while saving blocks to file
+      case ActionType.SAVE_BLOCKS_ERROR:
+        state.loading = false;
+        state.error = action.payload;
+
         return state;
 
       default:

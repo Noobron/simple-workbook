@@ -3,6 +3,7 @@ import bundle from "../../bundler";
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
 import { Block } from "../block";
+import { RootState } from "../reducers";
 
 export const createBundle = (
   id: string,
@@ -11,7 +12,7 @@ export const createBundle = (
   formRef: React.RefObject<HTMLFormElement>,
   bindTo?: string
 ) => {
-  return async (dispatch: Dispatch<Action>, getState: any) => {
+  return async (dispatch: Dispatch<Action>, getState: () => RootState) => {
     // don't dispatch any action(s) if any of the ref object(s) are not loaded yet
     if (!jsInputRef.current || !formRef.current) {
       return;
