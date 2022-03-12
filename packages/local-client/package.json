@@ -1,7 +1,9 @@
 {
   "name": "@simple-workbook/local-client",
   "version": "0.1.0",
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "build"
   ],
@@ -48,7 +50,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "concurrently --kill-others \"react-scripts start\" \"node server.mjs \""
+    "start": "concurrently --kill-others \"react-scripts start\" \"node server.mjs \"",
+    "prepublishOnly": "npm run build"
   },
   "eslintConfig": {
     "extends": [
