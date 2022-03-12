@@ -4,7 +4,7 @@ export const Constants = {
   BUNDLER: {
     MODULE_URL: `${NPM_CDN_URL}/{0}`,
     RELATIVE_MODULE_URL: `${NPM_CDN_URL}{0}/`,
-    HTML_FILE_SERVER_URL: `http://${window.location.hostname}:${process.env.REACT_APP_HTML_FILE_SERVER_PORT}/`,
+    HTML_FILE_SERVER_URL: `http://${process.env.REACT_APP_FILE_SERVER_DOMAIN}:${process.env.REACT_APP_HTML_FILE_SERVER_PORT}/`,
   },
 
   EDITOR: {
