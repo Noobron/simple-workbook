@@ -1,5 +1,6 @@
 # dependencies
-/packages/**/node_modules
+/packages/**/node_modules/
+/packages/**/dist/
 /packages/local-client/.pnp
 /packages/local-client/.pnp.js
 
