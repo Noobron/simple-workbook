@@ -1,5 +1,5 @@
 {
-  "name": "simple-workbook",
+  "name": "@simple-workbook/cli",
   "version": "1.0.3",
   "description": "",
   "bin": "dist/index.js",
