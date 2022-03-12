@@ -1,7 +1,10 @@
 {
-  "name": "cli",
+  "name": "@simple-workbook/cli",
   "version": "1.0.0",
   "description": "",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "tsc --watch --preserveWatchOutput"
   },
@@ -10,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "commander": "^9.0.0",
-    "local-api": "^1.0.0"
+    "@simple-workbook/local-api": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",

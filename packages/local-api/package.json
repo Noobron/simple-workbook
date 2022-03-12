@@ -1,7 +1,10 @@
 {
-  "name": "local-api",
+  "name": "@simple-workbook/local-api",
   "version": "1.0.0",
   "description": "",
+  "files": [
+    "dist"
+  ],
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
@@ -22,6 +25,6 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "http-proxy-middleware": "^2.0.3",
-    "local-client": "^0.1.0"
+    "@simple-workbook/local-client": "^0.1.0"
   }
 }
