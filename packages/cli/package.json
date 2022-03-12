@@ -1,6 +1,6 @@
 {
-  "name": "@simple-workbook/cli",
-  "version": "1.0.2",
+  "name": "simple-workbook",
+  "version": "1.0.3",
   "description": "",
   "bin": "dist/index.js",
   "publishConfig": {
@@ -17,10 +17,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@simple-workbook/local-client": "^1.0.2"
+    "@simple-workbook/local-client": "^1.0.3"
   },
   "devDependencies": {
-    "@simple-workbook/local-api": "^1.0.2",
+    "@simple-workbook/local-api": "^1.0.3",
     "@types/node": "^17.0.21",
     "commander": "^9.0.0",
     "esbuild": "0.8.26",
