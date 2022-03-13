@@ -4,7 +4,7 @@ A sandbox tool that lets users bundle and execute JavaScript code via in-browser
 
 Content creation and result generation is done using re-sizeable cells.
 
-As of now, <strong>simple-workbook</strong> enables users to create content utilizing markdown and HTML/CSS/JS 
+As of now, <strong>simple-workbook</strong> enables users to create content utilizing markdown and HTML/CSS/JS.
 
 Following are the features supported by <strong>simple-workbook</strong>:
 
