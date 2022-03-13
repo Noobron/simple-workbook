@@ -1,8 +1,8 @@
 # simple-workbook
 
-A sandbox tool which lets users bundle and excute JavaScript code via in-browser complitation.
+A sandbox tool that lets users bundle and execute JavaScript code via in-browser compilation.
 
-The code is created and executed by generating resizable cells.
+Content creation and result generation is done using re-sizeable cells.
 
 As of now, <strong>simple-workbook</strong> enables users to create content utilizing markdown and HTML/CSS/JS 
 
