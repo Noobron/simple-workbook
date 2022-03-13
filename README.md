@@ -28,7 +28,7 @@ For trying the CLI, run the following code to download and execute the package:
 $ npx @simple-workbook/cli serve
 ```
 
-The bundling of the Javascript code is done with the help of [esbuild](https://esbuild.github.io/).
+The bundling of the JavaScript code is done with the help of [esbuild](https://esbuild.github.io/).
 
 The frontend application is built with the help of [React](https://reactjs.org/) and [Redux](https://redux.js.org/) for state management.
 
